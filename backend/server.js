@@ -43,8 +43,7 @@ app.use(express.urlencoded({ extended: true, limit: '10mb' }));
 app.use(cookieParser());
 app.use(cors({
   origin: [
-    "http://localhost:5173",
-    "https://chatapp-communet.onrender.com"
+    "http://localhost:5173",                    // ✅ Local development         
   ],
   credentials: true,
 }));
