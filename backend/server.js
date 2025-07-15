@@ -43,9 +43,10 @@ app.use(express.urlencoded({ extended: true, limit: '10mb' }));
 app.use(cookieParser());
 app.use(cors({
   origin: [
-    "http://localhost:5173",                    // ✅ Local development         
+    'https://communet-lac.vercel.app',
+    'http://localhost:5173'  // if using Vite
   ],
-  credentials: true,
+  credentials: true
 }));
 
 app.use('/api/auth', authRoutes);
