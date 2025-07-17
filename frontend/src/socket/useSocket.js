@@ -175,7 +175,7 @@ export const useChatStore = create((set, get) => ({
                 [senderId]: false
               }
             }));
-          }, 5000);
+          }, 5001);
         }
       }
     });

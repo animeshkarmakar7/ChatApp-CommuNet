@@ -2,7 +2,7 @@ import axios from 'axios';
 
 const API = axios.create({
   baseURL: import.meta.env.MODE === "development" 
-    ? "http://localhost:5000/api"  // or your local backend port
+    ? "http://localhost:5001/api"  // or your local backend port
     : "https://chatapp-communet.onrender.com/api",
   withCredentials: true 
 });

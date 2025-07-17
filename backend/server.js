@@ -26,8 +26,8 @@ app.use = function (path, ...handlers) {
 
 mongoose.connect(process.env.MONGO_URI)
 .then(() => {
-  server.listen(5000, () => {
-    console.log('Server running on port 5000');
+  server.listen(5001, () => {
+    console.log('Server running on port 5001');
     console.log('Socket.IO server ready');
     console.log('MongoDB connected');
   });
@@ -43,8 +43,7 @@ app.use(express.urlencoded({ extended: true, limit: '10mb' }));
 app.use(cookieParser());
 app.use(cors({
   origin: [
-    'https://chat-app-commu-net.vercel.app',
-    'http://localhost:5173'  // if using Vite
+    'http://localhost:5173' , // if using Vite
   ],
   credentials: true
 }));
