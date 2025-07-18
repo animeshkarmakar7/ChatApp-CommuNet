@@ -43,9 +43,13 @@ app.use(express.urlencoded({ extended: true, limit: '10mb' }));
 app.use(cookieParser());
 app.use(cors({
   origin: [
-    'http://localhost:5173' , // if using Vite
+    'https://communet-chi.vercel.app', 
+    'http://localhost:5173' , 
   ],
-  credentials: true
+  credentials: true,
+  credentials: true,
+  methods: ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS'],
+  allowedHeaders: ['Content-Type', 'Authorization']
 }));
 
 app.use('/api/auth', authRoutes);
