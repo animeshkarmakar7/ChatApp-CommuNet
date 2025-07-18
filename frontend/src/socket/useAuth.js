@@ -4,7 +4,9 @@ import toast from "react-hot-toast";
 import { io } from "socket.io-client";
 
 const BASE_URL =
-  import.meta.env.MODE === "development" ? "https://communet-adob.onrender.com" : "/";
+ import.meta.env.MODE === "development" 
+  ? "http://localhost:5001/api"                    // LOCAL development
+  : "https://communet-xljy.onrender.com/api"; 
 
 export const useAuthStore = create((set, get) => ({
   authUser: JSON.parse(localStorage.getItem("authUser")) || null,
